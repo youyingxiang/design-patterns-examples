@@ -7,36 +7,35 @@ package examples
 
 import "fmt"
 
-// 首先，我们有一个门界面和实现 .
-
-type door interface {
-	getWidth() float32
-	getHeight() float32
+// desk 桌子
+type desk interface {
+	GetWidth() float32
+	GetHeight() float32
 }
 
-// WoodenDoor 结构体
-type WoodenDoor struct {
+// WoodenDesk 结构体
+type WoodenDesk struct {
 	width  float32 // 宽度
 	height float32 // 长度
 }
 
 // GetWidth 获取宽
-func (woodenDoor *WoodenDoor) GetWidth() float32 {
+func (woodenDoor *WoodenDesk) GetWidth() float32 {
 	return woodenDoor.width
 }
 
 // GetHeight 获取高度
-func (woodenDoor *WoodenDoor) GetHeight() float32 {
+func (woodenDoor *WoodenDesk) GetHeight() float32 {
 	return woodenDoor.height
 }
 
-// MakeDoor 工厂模式创建 WoodenDoor
-func MakeDoor(width float32, height float32) *WoodenDoor {
-	return &WoodenDoor{width: width, height: height}
+// MakeDesk 工厂模式创建 WoodenDesk
+func MakeDesk(width float32, height float32) *WoodenDesk {
+	return &WoodenDesk{width: width, height: height}
 }
 
 // SimpleFactory 简单工厂模式
 func SimpleFactory() {
-	door := MakeDoor(23, 12)
-	fmt.Println(door.GetWidth())
+	desk := MakeDesk(23, 12)
+	fmt.Println(desk.GetWidth())
 }

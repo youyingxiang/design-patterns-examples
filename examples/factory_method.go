@@ -21,7 +21,7 @@ type Developer struct {
 
 // AskQuestions 开发者面试需要回答的问题
 func (developer *Developer) AskQuestions() {
-	fmt.Println("Asking about design patterns!")
+	fmt.Println("问关于开发的问题!")
 }
 
 // CommunityExecutive CommunityExecutive(行政人员)
@@ -30,7 +30,7 @@ type CommunityExecutive struct {
 
 // AskQuestions CommunityExecutive(行政人员)面试需要回答的问题
 func (communityExecutive *CommunityExecutive) AskQuestions() {
-	fmt.Println("Asking about community building!")
+	fmt.Println("问关于行政的问题!")
 }
 
 // HiringManager 现在让我们创造我们的 HiringManager(招聘经理)

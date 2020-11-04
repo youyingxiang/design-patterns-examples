@@ -11,4 +11,7 @@ func main() {
 	// 工厂方法模式（Factory Method）
 	examples.FactoryMethod()
 
+	// 抽象工厂模式（Abstract Factory）
+	examples.AbstractFactory()
+
 }
