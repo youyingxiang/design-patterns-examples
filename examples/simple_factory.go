@@ -5,6 +5,8 @@
 
 package examples
 
+import "fmt"
+
 // 首先，我们有一个门界面和实现 .
 
 type door interface {
@@ -31,4 +33,10 @@ func (woodenDoor *WoodenDoor) GetHeight() float32 {
 // MakeDoor 工厂模式创建 WoodenDoor
 func MakeDoor(width float32, height float32) *WoodenDoor {
 	return &WoodenDoor{width: width, height: height}
+}
+
+// SimpleFactory 简单工厂模式
+func SimpleFactory() {
+	door := MakeDoor(23, 12)
+	fmt.Println(door.GetWidth())
 }

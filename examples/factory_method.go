@@ -10,7 +10,7 @@ import "fmt"
 
 // 场景：以招聘经理为例。首先，我们有一个访谈者界面和回答问题方法
 
-// interviewer 面试接口 实现回答问题
+// Interviewer 面试接口 实现回答问题
 type interviewer interface {
 	AskQuestions()
 }
@@ -46,4 +46,22 @@ func (hiringManager *HiringManager) TakeInterview() {
 // NewHiringManager 去找招聘者面试()
 func NewHiringManager(iv interviewer) *HiringManager {
 	return &HiringManager{Interviewer: iv}
+}
+
+// FactoryMethod 工厂方法模式
+func FactoryMethod() {
+	// 开发者面试
+	developer := &Developer{}
+	// 获取一个给开发者面试的面试官
+	developmentManager := NewHiringManager(developer)
+	// 询问开发者问题
+	developmentManager.TakeInterview()
+
+	// 行政人员
+	communityExecutive := &CommunityExecutive{}
+	// 获取一个给行政人员面试的面试官
+	communityExecutiveManager := NewHiringManager(communityExecutive)
+	// 询问行政人员问题
+	communityExecutiveManager.TakeInterview()
+
 }
