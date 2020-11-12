@@ -8,7 +8,7 @@
     - [🏭工厂方法模式（Factory Method）](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/factory_method.go)
     - [🔨抽象工厂模式（Abstract Factory）](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/abstract_factory.go)
     - [👷建造者模式](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/builder.go)[(👷测试用例)](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/builder_test.go)
-    - [🐑原型模式（Prototype）](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/prototype.go)[(🐑测试用例)](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/prototype_test.go)
+    - [🐑原型模式](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/prototype.go)[(🐑测试用例)](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/prototype_test.go)
     - [💍单例模式（Singleton）](#💍单例模式singleton)
 - [结构型设计模式](#结构型设计模式)
     - [🔌适配器模式（Adapter）](#🔌适配器模式adapter)
