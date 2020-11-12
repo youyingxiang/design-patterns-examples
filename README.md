@@ -7,7 +7,7 @@
     - [🏠简单工厂模式（Simple Factory）](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/simple_factory.go)
     - [🏭工厂方法模式（Factory Method）](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/factory_method.go)
     - [🔨抽象工厂模式（Abstract Factory）](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/abstract_factory.go)
-    - [👷建造者模式](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/builder.go)[测试用例](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/builder_test.go)
+    - [👷建造者模式](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/builder.go)（[测试用例](https://github.com/youyingxiang/design-patterns-examples/blob/main/examples/builder_test.go))
     - [🐑原型模式（Prototype）](#🐑原型模式prototype)
     - [💍单例模式（Singleton）](#💍单例模式singleton)
 - [结构型设计模式](#结构型设计模式)
