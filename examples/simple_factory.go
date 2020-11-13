@@ -5,8 +5,6 @@
 
 package examples
 
-import "fmt"
-
 // desk 桌子
 type desk interface {
 	GetWidth() float32
@@ -32,10 +30,4 @@ func (woodenDoor *WoodenDesk) GetHeight() float32 {
 // MakeDesk 工厂模式创建 WoodenDesk
 func MakeDesk(width float32, height float32) *WoodenDesk {
 	return &WoodenDesk{width: width, height: height}
-}
-
-// SimpleFactory 简单工厂模式
-func SimpleFactory() {
-	desk := MakeDesk(23, 12)
-	fmt.Println(desk.GetWidth())
 }

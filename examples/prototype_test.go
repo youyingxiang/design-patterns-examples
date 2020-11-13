@@ -14,10 +14,12 @@ func TestPrototype(t *testing.T) {
 	clonesheep.SetName("Dolly")
 	clonesheep.SeCategory("澳大利亚绵羊")
 
-	if clonesheep.GetName() == sheep.GetName() {
+	if sheep.GetName() != "Jolly" || sheep.GetCategory() != "山地绵羊" {
 		t.Fail()
 	}
-	sheep.GetDescription()
-	clonesheep.GetDescription()
+
+	if clonesheep.GetName() != "Dolly" || clonesheep.GetCategory() != "澳大利亚绵羊" {
+		t.Fail()
+	}
 
 }

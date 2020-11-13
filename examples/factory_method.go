@@ -6,13 +6,11 @@
 
 package examples
 
-import "fmt"
-
 // 场景：以招聘经理为例。首先，我们有一个访谈者界面和回答问题方法
 
 // Interviewer 面试接口 实现回答问题
 type interviewer interface {
-	AskQuestions()
+	AskQuestions() string
 }
 
 // Developer 开发者
@@ -20,8 +18,8 @@ type Developer struct {
 }
 
 // AskQuestions 开发者面试需要回答的问题
-func (developer *Developer) AskQuestions() {
-	fmt.Println("问关于开发的问题!")
+func (developer *Developer) AskQuestions() string {
+	return "问关于开发的问题!"
 }
 
 // CommunityExecutive CommunityExecutive(行政人员)
@@ -29,8 +27,8 @@ type CommunityExecutive struct {
 }
 
 // AskQuestions CommunityExecutive(行政人员)面试需要回答的问题
-func (communityExecutive *CommunityExecutive) AskQuestions() {
-	fmt.Println("问关于行政的问题!")
+func (communityExecutive *CommunityExecutive) AskQuestions() string {
+	return "问关于行政的问题!"
 }
 
 // HiringManager 现在让我们创造我们的 HiringManager(招聘经理)
@@ -39,29 +37,11 @@ type HiringManager struct {
 }
 
 // TakeInterview 接受面试
-func (hiringManager *HiringManager) TakeInterview() {
-	hiringManager.Interviewer.AskQuestions()
+func (hiringManager *HiringManager) TakeInterview() string {
+	return hiringManager.Interviewer.AskQuestions()
 }
 
 // NewHiringManager 去找招聘者面试()
 func NewHiringManager(iv interviewer) *HiringManager {
 	return &HiringManager{Interviewer: iv}
-}
-
-// FactoryMethod 工厂方法模式
-func FactoryMethod() {
-	// 开发者面试
-	developer := &Developer{}
-	// 获取一个给开发者面试的面试官
-	developmentManager := NewHiringManager(developer)
-	// 询问开发者问题
-	developmentManager.TakeInterview()
-
-	// 行政人员
-	communityExecutive := &CommunityExecutive{}
-	// 获取一个给行政人员面试的面试官
-	communityExecutiveManager := NewHiringManager(communityExecutive)
-	// 询问行政人员问题
-	communityExecutiveManager.TakeInterview()
-
 }

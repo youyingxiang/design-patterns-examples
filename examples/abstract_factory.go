@@ -6,12 +6,10 @@
 
 package examples
 
-import "fmt"
-
 // door 接口
 type door interface {
 	// GetDescription 获取描述信息
-	GetDescription()
+	GetDescription() string
 }
 
 // WoodenDoor 木门
@@ -19,8 +17,8 @@ type WoodenDoor struct {
 }
 
 // GetDescription 木门的描述
-func (woodenDoor *WoodenDoor) GetDescription() {
-	fmt.Println("我是木门！")
+func (woodenDoor *WoodenDoor) GetDescription() string {
+	return "我是木门！"
 }
 
 // IronDoor 铁门
@@ -28,14 +26,14 @@ type IronDoor struct {
 }
 
 // GetDescription 铁门的描述
-func (ironDoor *IronDoor) GetDescription() {
-	fmt.Println("我是铁门！")
+func (ironDoor *IronDoor) GetDescription() string {
+	return "我是铁门！"
 }
 
 // doorFittingExpert 接口（装门的人）
 type doorFittingExpert interface {
 	// GetDescription 获取描述信息
-	GetDescription()
+	GetDescription() string
 }
 
 // Welder 装铁门的人
@@ -43,8 +41,8 @@ type Welder struct {
 }
 
 // GetDescription 装铁门的人的描述
-func (welder *Welder) GetDescription() {
-	fmt.Println("我是装铁门的人！")
+func (welder *Welder) GetDescription() string {
+	return "我是装铁门的人！"
 }
 
 // Carpenter 装木门的人
@@ -52,8 +50,8 @@ type Carpenter struct {
 }
 
 // GetDescription 装木门的人的描述
-func (carpenter *Carpenter) GetDescription() {
-	fmt.Println("我是装木门的人！")
+func (carpenter *Carpenter) GetDescription() string {
+	return "我是装木门的人！"
 }
 
 // doorFactory 现在我们有抽象工厂，让我们制作相关对象的工厂，即木门工厂将创建一个木门和木匠，铁门工厂将创建一个铁门和铁匠
@@ -94,18 +92,5 @@ func (ironDoorFactory *IronDoorFactory) MakeFittingExpert() *Welder {
 
 // AbstractFactory 抽象工厂模式
 func AbstractFactory() {
-	// 木门工厂
-	woodenDoorFactory := &WoodenDoorFactory{}
-	// 木门的描述
-	woodenDoorFactory.MakeDoor().GetDescription()
-	// 木匠的描述
-	woodenDoorFactory.MakeFittingExpert().GetDescription()
-
-	// 铁门工厂
-	ironDoorFactory := &IronDoorFactory{}
-	// 铁门的描述
-	ironDoorFactory.MakeDoor().GetDescription()
-	// 铁匠的描述
-	ironDoorFactory.MakeFittingExpert().GetDescription()
 
 }
