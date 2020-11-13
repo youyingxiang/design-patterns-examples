@@ -89,8 +89,3 @@ func (ironDoorFactory *IronDoorFactory) MakeDoor() *IronDoor {
 func (ironDoorFactory *IronDoorFactory) MakeFittingExpert() *Welder {
 	return &Welder{}
 }
-
-// AbstractFactory 抽象工厂模式
-func AbstractFactory() {
-
-}
